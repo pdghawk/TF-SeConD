@@ -14,7 +14,7 @@ TF-SeConD : TensorFlow SEmiCONductor Dynamics
    why_tf
    Background
    guide
-   api
+   TFSEC
    license
 
 Indices and tables
