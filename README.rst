@@ -1,7 +1,8 @@
 README
 =======
 
-`Click here for the docs <https://pdghawk.github.io/TF-SeConD>`_.
+`Click here for the docs <https://pdghawk.github.io/TF-SeConD>`_, jump straight
+to the documentation of the code base `here <https://pdghawk.github.io/TF-SeConD/html/TFSEC.html>`_.
 
 TF-SeConD (TensorFlow-SEmiCONductor Dynamics) is a python/tensorflow package
 for the calculation of the interaction of ultrafast lasers with two-dimensional
