@@ -1,0 +1,6 @@
+TF\_SECOND.crystal.generate\_params
+===================================
+
+.. currentmodule:: TF_SECOND.crystal
+
+.. autofunction:: generate_params

@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TF_SECOND.runs &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TF_SECOND.figs" href="TF_SECOND.figs.html" />
+    <link rel="prev" title="TF_SECOND.crystal.generate_params" href="TF_SECOND.crystal.generate_params.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">TF-SeConD code documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#tf-second">TF_SECOND</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.solver.html">TF_SECOND.crystal.solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.generate_params.html">TF_SECOND.crystal.generate_params</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TF_SECOND.runs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.figs.html">TF_SECOND.figs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">TF-SeConD code documentation</a> &raquo;</li>
+        
+      <li>TF_SECOND.runs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/stubs/TF_SECOND.runs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-TF_SECOND.runs">
+<span id="tf-second-runs"></span><h1>TF_SECOND.runs<a class="headerlink" href="#module-TF_SECOND.runs" title="Permalink to this headline">¶</a></h1>
+<p>Module containing pre-made running-routines for TF-SeConD</p>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.runs.absorption_loop" title="TF_SECOND.runs.absorption_loop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">absorption_loop</span></code></a>(Nx,&nbsp;Ny,&nbsp;filename[,&nbsp;…])</td>
+<td>absorption for different coulomb interaction models</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.runs.k_loop" title="TF_SECOND.runs.k_loop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">k_loop</span></code></a>(Nx_arr,&nbsp;Ny_arr,&nbsp;filename[,&nbsp;…])</td>
+<td>vary the size of the k grid</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.runs.thz_loop" title="TF_SECOND.runs.thz_loop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thz_loop</span></code></a>(thz_pols,&nbsp;Nx,&nbsp;Ny,&nbsp;filename[,&nbsp;…])</td>
+<td>vary the polarization of the THz field</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="TF_SECOND.runs.absorption_loop">
+<code class="descclassname">TF_SECOND.runs.</code><code class="descname">absorption_loop</code><span class="sig-paren">(</span><em>Nx</em>, <em>Ny</em>, <em>filename</em>, <em>plot_figs=True</em>, <em>save_figs=False</em>, <em>do_symmetric=False</em>, <em>do_constrained=True</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.runs.absorption_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>absorption for different coulomb interaction models</p>
+<p>This function will run a set of absorption simulations, for different
+coulomb interaction models and (optionally) save the figures to file, and
+(optionally) print them to screen. Compares, no Coulomb interaction (free carrier)
+with linear and ‘slab’ dielectric forms of the permitivity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Nx</strong> – (int) x dimension of k grid to run</li>
+<li><strong>Ny</strong> – int) y dimension of k grid to run</li>
+<li><strong>filename</strong> – (string) directory name to save figures to - will save in this directory
+within ‘figs’ directory in current working directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>plot_figs</strong> – (bool) plot the figures? True or False</li>
+<li><strong>save_figs</strong> – (bool) save fhe figsures?</li>
+<li><strong>do_symmetric</strong> – (bool) symmetrise the crystal?</li>
+<li><strong>do_constrained</strong> – (bool) apply screening to Coloumb</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dummy result of 0 for testing only</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.runs.k_loop">
+<code class="descclassname">TF_SECOND.runs.</code><code class="descname">k_loop</code><span class="sig-paren">(</span><em>Nx_arr</em>, <em>Ny_arr</em>, <em>filename</em>, <em>plot_figs=True</em>, <em>save_figs=False</em>, <em>do_symmetric=False</em>, <em>do_constrained=True</em>, <em>do_linear_eps=False</em>, <em>do_absorption=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.runs.k_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>vary the size of the k grid</p>
+<p>This function will run a set of sideband generation or absortpion simulations,
+and (optionally) save the figures to file, and (optionally) print them to
+screen. This can be used to ensure convergance of the simulations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>Nx_arr</strong> – numpy array (1d) of x dimensions of k grid to run</li>
+<li><strong>Ny_arr</strong> – numpy array (1d) of y dimensions of k grid to run</li>
+<li><strong>filename</strong> – (string) directory name to save figures to - will save in this directory
+within ‘figs’ directory in current working directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>plot_figs</strong> – (bool) plot the figures? True or False</li>
+<li><strong>save_figs</strong> – (bool) save fhe figsures?</li>
+<li><strong>do_symmetric</strong> – (bool) symmetrise the crystal?</li>
+<li><strong>do_constrained</strong> – (bool) apply screening to Coloumb</li>
+<li><strong>do_linear_eps</strong> – (bool) enforces linear perimitivity of crystal in k if True</li>
+<li><strong>do_absorption</strong> – (bool) studies absorption problem if True</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dummy result of 0 for testing only</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.runs.thz_loop">
+<code class="descclassname">TF_SECOND.runs.</code><code class="descname">thz_loop</code><span class="sig-paren">(</span><em>thz_pols</em>, <em>Nx</em>, <em>Ny</em>, <em>filename</em>, <em>plot_figs=True</em>, <em>save_figs=False</em>, <em>do_symmetric=False</em>, <em>do_constrained=True</em>, <em>do_linear_eps=False</em>, <em>do_absorption=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.runs.thz_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>vary the polarization of the THz field</p>
+<p>This function will run a set of sideband generation simulations, for different
+THz laser field polarizations and (optionally) save the figures to file, and
+(optionally) print them to screen. This studies the effect of crystal asymmetry
+along different crystal axes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>thz_pols</strong> – numpy array of thz polarizations (in degrees), typically 0-90</li>
+<li><strong>Nx</strong> – (int) x dimension of k grid to run</li>
+<li><strong>Ny</strong> – int) y dimension of k grid to run</li>
+<li><strong>filename</strong> – (string) directory name to save figures to - will save in this directory
+within ‘figs’ directory in current working directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>plot_figs</strong> – (bool) plot the figures? True or False</li>
+<li><strong>save_figs</strong> – (bool) save fhe figsures?</li>
+<li><strong>do_symmetric</strong> – (bool) symmetrise the crystal?</li>
+<li><strong>do_constrained</strong> – (bool) apply screening to Coloumb</li>
+<li><strong>do_linear_eps</strong> – (bool) enforces linear perimitivity of crystal in k if True</li>
+<li><strong>do_absorption</strong> – (bool) studies absorption problem if True</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">dummy result of 0 for testing only</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TF_SECOND.figs.html" class="btn btn-neutral float-right" title="TF_SECOND.figs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TF_SECOND.crystal.generate_params.html" class="btn btn-neutral" title="TF_SECOND.crystal.generate_params" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

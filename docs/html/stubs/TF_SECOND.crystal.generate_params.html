@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TF_SECOND.crystal.generate_params &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TF_SECOND.runs" href="TF_SECOND.runs.html" />
+    <link rel="prev" title="TF_SECOND.crystal.solver" href="TF_SECOND.crystal.solver.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">TF-SeConD code documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#tf-second">TF_SECOND</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.solver.html">TF_SECOND.crystal.solver</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TF_SECOND.crystal.generate_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.runs.html">TF_SECOND.runs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.figs.html">TF_SECOND.figs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">TF-SeConD code documentation</a> &raquo;</li>
+        
+      <li>TF_SECOND.crystal.generate_params</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/stubs/TF_SECOND.crystal.generate_params.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tf-second-crystal-generate-params">
+<h1>TF_SECOND.crystal.generate_params<a class="headerlink" href="#tf-second-crystal-generate-params" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="TF_SECOND.crystal.generate_params">
+<code class="descclassname">TF_SECOND.crystal.</code><code class="descname">generate_params</code><span class="sig-paren">(</span><em>Nx=61</em>, <em>Ny=41</em>, <em>dt0_fs=0.08</em>, <em>symmetric=False</em>, <em>do_nonperiodic=False</em>, <em>do_constrained=True</em>, <em>do_linear_eps=False</em>, <em>do_absorption=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.generate_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a set of parameter dictionaries</p>
+<p>this script sets up the parameters of the problem, can be called within other
+scripts to allow for easy variation of parameters and keeping the main run
+codes clean.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>Nx</strong> – number of grid points in x direction</li>
+<li><strong>Ny</strong> – number of grid points in y direction</li>
+<li><strong>dt0_fs</strong> – spacing of points on the time grid</li>
+<li><strong>symmetric</strong> – make band structure symmetric in x&amp;y</li>
+<li><strong>do_constrained</strong> – force a 2d nature to the Coulomb interaction
+(eps_r k dependent)</li>
+<li><strong>do_linear_eps</strong> – True make eps_r(k) linear in k (Keldysh approx).
+False has Trolle form [Trolle et al., Scientific Reports 7 (2017)]</li>
+<li><strong>absorption</strong> (<em>do</em>) – True if want to study absorption - will set parameters
+optimally, namely the central frequency and spectral
+width of the optical pulse, no ThZ pulse.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><p>tuple containing:</p>
+<p>XTAL_PARAMS:  parameters of the crystal (dictionary)
+LASER_PARAMS: paramaters of the laser (dictionary)
+GRID_PARAMS:  parameters of the numerical grids (dictionary)</p>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(tuple)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TF_SECOND.runs.html" class="btn btn-neutral float-right" title="TF_SECOND.runs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TF_SECOND.crystal.solver.html" class="btn btn-neutral" title="TF_SECOND.crystal.solver" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

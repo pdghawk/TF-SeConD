@@ -1,0 +1,24 @@
+TF\_SECOND.runs
+===============
+
+.. automodule:: TF_SECOND.runs
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      absorption_loop
+      k_loop
+      thz_loop
+   
+   
+
+   
+   
+   
+
+   
+   
+   

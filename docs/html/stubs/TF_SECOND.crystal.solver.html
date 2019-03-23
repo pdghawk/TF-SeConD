@@ -1,0 +1,762 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TF_SECOND.crystal.solver &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="TF_SECOND.crystal.generate_params" href="TF_SECOND.crystal.generate_params.html" />
+    <link rel="prev" title="TF-SeConD code documentation" href="../api.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">TF-SeConD code documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#tf-second">TF_SECOND</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TF_SECOND.crystal.solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.generate_params.html">TF_SECOND.crystal.generate_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.runs.html">TF_SECOND.runs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.figs.html">TF_SECOND.figs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">TF-SeConD code documentation</a> &raquo;</li>
+        
+      <li>TF_SECOND.crystal.solver</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/stubs/TF_SECOND.crystal.solver.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tf-second-crystal-solver">
+<h1>TF_SECOND.crystal.solver<a class="headerlink" href="#tf-second-crystal-solver" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="TF_SECOND.crystal.solver">
+<em class="property">class </em><code class="descclassname">TF_SECOND.crystal.</code><code class="descname">solver</code><span class="sig-paren">(</span><em>XTAL_PARAMS</em>, <em>LASER_PARAMS</em>, <em>GRID_PARAMS</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver" title="Permalink to this definition">¶</a></dt>
+<dd><p>For the calculation of dynamics in two dimensional semiconductors</p>
+<p>OVERVIEW:</p>
+<p>This class provides methods for the calculation of absorption and dynamics
+in two dimensional semiconductors.</p>
+<p>A guide for how to use this class, and other parts of the TF_SeConD package,
+see the <a class="reference internal" href="../guide.html#user-guide"><span class="std std-ref">User Guide</span></a> in the <a class="reference external" href="https://pdghawk.github.io/TF-SeConD">docs</a>.</p>
+<p>Parameters of the model should be passed at initialization. These parameters
+are passed as dictionary objects. The script get_params.py provides a useful
+tool for simple creation of these dictionary objects.</p>
+<p>The dynamical problem in solved using the semiconductor optical Bloch
+equations. Further details of the background physics documentation under
+<a class="reference internal" href="../Background.html#background"><span class="std std-ref">Background</span></a>.</p>
+<p>Tensorflow is used in several of the methods to allow for utilzation of GPUs
+to increase perfmonance of large array calculations.</p>
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>XTAL_PARAMS</em>, <em>LASER_PARAMS</em>, <em>GRID_PARAMS</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize class</p>
+<p>writes the parameters passed to initialization into ‘self’ variables
+and constructs the Coulomb matrix elements in a numpy array. Using
+parameters defined in PARAM inputs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>XTAL_PARAMS</strong> – dictionary of parameters of the crystal</li>
+<li><strong>LASER_PARAMS</strong> – dictionary of parameters of the laser fields</li>
+<li><strong>GRID_PARAMS</strong> – dictionary of parameters of the numerical grids</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.A_thz" title="TF_SECOND.crystal.solver.A_thz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">A_thz</span></code></a>(t)</td>
+<td>THz laser field vector potential (A)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.E_opt_RWA" title="TF_SECOND.crystal.solver.E_opt_RWA"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E_opt_RWA</span></code></a>(t)</td>
+<td>Optical laser field envelope (real-valued)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.E_opt_exp" title="TF_SECOND.crystal.solver.E_opt_exp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E_opt_exp</span></code></a>(t,&nbsp;pump_freq)</td>
+<td>Optical laser field (single exponent)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.E_opt_fun" title="TF_SECOND.crystal.solver.E_opt_fun"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E_opt_fun</span></code></a>(t,&nbsp;pump_freq)</td>
+<td>Optical laser field (real-valued)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.E_thz" title="TF_SECOND.crystal.solver.E_thz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E_thz</span></code></a>(t)</td>
+<td>THz laser field</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.__init__" title="TF_SECOND.crystal.solver.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(XTAL_PARAMS,&nbsp;LASER_PARAMS,&nbsp;GRID_PARAMS)</td>
+<td>Initialize class</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.calculate_absorption" title="TF_SECOND.crystal.solver.calculate_absorption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_absorption</span></code></a>([include_coulomb,&nbsp;…])</td>
+<td>calculate polarization response to get absorption</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.check_1s_performed" title="TF_SECOND.crystal.solver.check_1s_performed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_1s_performed</span></code></a>([include_coulomb])</td>
+<td>Check 1s state has been found variationally or do so if not</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.check_vals" title="TF_SECOND.crystal.solver.check_vals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_vals</span></code></a>()</td>
+<td>check the eigenvalue 1s binding energy in exciton units of energy</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.eigen_solve" title="TF_SECOND.crystal.solver.eigen_solve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigen_solve</span></code></a>()</td>
+<td>Eigenvalue problem solver</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.get_1s_2d" title="TF_SECOND.crystal.solver.get_1s_2d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_1s_2d</span></code></a>()</td>
+<td>Get the variational 1s state in 2d form and the k axes in 2d</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.get_epsr" title="TF_SECOND.crystal.solver.get_epsr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_epsr</span></code></a>()</td>
+<td>get the k depependence of the permitivity</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.get_one_s_states" title="TF_SECOND.crystal.solver.get_one_s_states"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_one_s_states</span></code></a>()</td>
+<td>Get states from variational and eigenvalue methods.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.reset_LASER" title="TF_SECOND.crystal.solver.reset_LASER"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset_LASER</span></code></a>(LASER_PARAMS)</td>
+<td>Reset the laser parameters class variable (dictionary)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.solve_SBE" title="TF_SECOND.crystal.solver.solve_SBE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solve_SBE</span></code></a>([include_coulomb,&nbsp;save_graph])</td>
+<td>Solve the semiconductor optical Bloch equations</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.crystal.solver.variational_gs" title="TF_SECOND.crystal.solver.variational_gs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">variational_gs</span></code></a>([save_meta,&nbsp;save_summary])</td>
+<td>Calculate 1s by energy minimization approx</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.A_thz">
+<code class="descname">A_thz</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.A_thz" title="Permalink to this definition">¶</a></dt>
+<dd><p>THz laser field vector potential (A)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> – time</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value of the thz vector potential at time t without x/y polarization</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Athz</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.E_opt_RWA">
+<code class="descname">E_opt_RWA</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.E_opt_RWA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optical laser field envelope (real-valued)</p>
+<p>optical laser field envelope, as required within rotating wave approx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> – time</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value of the optical field envelope at time t</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">opti</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.E_opt_exp">
+<code class="descname">E_opt_exp</code><span class="sig-paren">(</span><em>t</em>, <em>pump_freq</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.E_opt_exp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optical laser field (single exponent)</p>
+<p>optical laser field containing only exp(-iwt) part,
+used in rotating wave approx</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – time</li>
+<li><strong>pump_freq</strong> – frequency of field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">value of the optical field for RWA at time t</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">opti</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.E_opt_fun">
+<code class="descname">E_opt_fun</code><span class="sig-paren">(</span><em>t</em>, <em>pump_freq</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.E_opt_fun" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optical laser field (real-valued)</p>
+<p>optical laser field as measured (real-valued)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>t</strong> – time</li>
+<li><strong>pump_freq</strong> – frequency of field</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">value of the optical field at time t</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">opti</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.E_thz">
+<code class="descname">E_thz</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.E_thz" title="Permalink to this definition">¶</a></dt>
+<dd><p>THz laser field</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t</strong> – time</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">value of the thz field at time t without x/y polarization</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Ethz</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.calculate_absorption">
+<code class="descname">calculate_absorption</code><span class="sig-paren">(</span><em>include_coulomb=True</em>, <em>save_graph=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.calculate_absorption" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate polarization response to get absorption</p>
+<p>Solve the semiconductor dynamics for the system. Must first find the 1s
+state via the variational method - “variational_1s()”. This method
+includes only the optical field. For calculations with Thz driving field
+one can use “solve_SBE()”.
+The Coulomb interaction is included by default. It can be optionally
+turned off. In this case the dephasing reverts to a simple
+phenomenological form that doesn’t tak the 1s shape into account.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>include_coulomb</strong> – True will include the Coulomb interaction, False won’t.
+Defaults to True.</li>
+<li><strong>save_graph</strong> – Save the graph to a tensorboard file. Defaults to False</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>dictionary of:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><strong>freq_dict</strong>:</dt>
+<dd><dl class="first last docutils">
+<dt>Dictionary of variables that are functions of frequency :</dt>
+<dd><ul class="first last">
+<li>Pw: macroscopic polarization in frequency,</li>
+<li>Ew: optical field spectrum,</li>
+<li>w_norm: frequency grid in exciton units, centered at gap energy,</li>
+<li>w_eV: frequency grid in units of eV,</li>
+<li>absorption: absorption normalized to max 1</li>
+<li>absorption_bare: absorption without normalization</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>time_dict</strong>:</dt>
+<dd><dl class="first last docutils">
+<dt>Dictionary of variable that are functions of time:</dt>
+<dd><ul class="first last">
+<li>opt_field:    optical field in time,</li>
+<li>opt_env:      optical envelope in time,</li>
+<li>polarization: macroscopic polarization in time</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(dictionary)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.check_1s_performed">
+<code class="descname">check_1s_performed</code><span class="sig-paren">(</span><em>include_coulomb=True</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.check_1s_performed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check 1s state has been found variationally or do so if not</p>
+<p>checks if variation_performed is False, if so</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.check_vals">
+<code class="descname">check_vals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.check_vals" title="Permalink to this definition">¶</a></dt>
+<dd><p>check the eigenvalue 1s binding energy in exciton units of energy</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>none</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">contating statement of 1s eigenvalue binding energy in E_b</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.eigen_solve">
+<code class="descname">eigen_solve</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.eigen_solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Eigenvalue problem solver</p>
+<p>Solves the exciton eigenvalue problem to get the excitonic states and
+their energies (binding energy relative to band gap)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>none</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>dictionary of:</dt>
+<dd><ul class="first last simple">
+<li>eigvals: first 10 eigenvalues</li>
+<li>E1s: 1s exciton binding energy</li>
+<li>state_1s: 1s exciton state (in k space)</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(dictionary)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.get_1s_2d">
+<code class="descname">get_1s_2d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.get_1s_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the variational 1s state in 2d form and the k axes in 2d</p>
+<p>Returns:
+Dictionary: state: the variational 1s state in 2d form (numpy array), X: k_x in 2d form, Y: k_y in 2d form</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.get_epsr">
+<code class="descname">get_epsr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.get_epsr" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the k depependence of the permitivity</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>none</strong> – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="docutils">
+<dt>dictionary of:</dt>
+<dd><ul class="first last simple">
+<li>k: crystal momentum values</li>
+<li>epsr: value of permitivity at crystal momentum in k</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">(dictionary)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.get_one_s_states">
+<code class="descname">get_one_s_states</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.get_one_s_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get states from variational and eigenvalue methods.</p>
+<p>One should first calculate the states by calling “variational_1s” and
+“eigen_solve”.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">var_1s: variational 1s state, eig_1s: eigenproblem 1s state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Dictionary</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.reset_LASER">
+<code class="descname">reset_LASER</code><span class="sig-paren">(</span><em>LASER_PARAMS</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.reset_LASER" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the laser parameters class variable (dictionary)</p>
+<p>Provide a new parameter dictionary to overwrite the one provided at
+initialization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>LASER_PARAMS</strong> – a dictionary of laser parameters</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.solve_SBE">
+<code class="descname">solve_SBE</code><span class="sig-paren">(</span><em>include_coulomb=True</em>, <em>save_graph=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.solve_SBE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve the semiconductor optical Bloch equations</p>
+<p>Solve the semiconductor dynamics for the system. Must first find the 1s
+state via the variational method - “variational_1s()”. This method
+includes both the optical and THz fields. For calculations with only
+an optical field one can use “calculate_absorption()”.
+The Coulomb interaction is included by default. It can be optionally
+turned off. In this case the dephasing reverts to a simple
+phenomenological form that doesn’t tak the 1s shape into account.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>include_coulomb</strong> – True will include the Coulomb interaction, False won’t.
+Defaults to True.</li>
+<li><strong>save_graph</strong> – Save the graph to a tensorboard file. Defaults to False</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>dictionary of:</dt>
+<dd><ul class="first last simple">
+<li><dl class="first docutils">
+<dt><strong>freq_dict</strong>:</dt>
+<dd><dl class="first last docutils">
+<dt>Dictionary of variables that are functions of frequency :</dt>
+<dd><ul class="first last">
+<li>Pw: macroscopic polarization in frequency,</li>
+<li>Ew: optical field spectrum,</li>
+<li>w_eV: frequency grid in units of eV,</li>
+<li>w_sideband: frequency grid in units of sideband orders</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>time_dict</strong>:</dt>
+<dd><dl class="first last docutils">
+<dt>Dictionary of variable that are functions of time:</dt>
+<dd><ul class="first last">
+<li>opt_field:    optical field in time,</li>
+<li>opt_env:      optical envelope in time,</li>
+<li>polarization: macroscopic polarization in time,</li>
+<li>timegrid:    the time grid</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>kt_dict</strong>:</dt>
+<dd><dl class="first last docutils">
+<dt>Dictionary of variables for plotting polarization in k and t:</dt>
+<dd><ul class="first last">
+<li>kx: values of k along X-Gamma-X</li>
+<li>ky: values of k along Y-Gamma-Y</li>
+<li>Ax: laser vector potential in x direction at all times</li>
+<li>Ay: laser vector potential in y direction at all times</li>
+<li>P_kt_XGX: microscopic polarization along X-Gamma-X in time</li>
+<li>P_kt_YGY: microscopic polarization along Y-Gamma-Y in time,</li>
+<li>Pmicro2d: microscopic polarization in 2d k-space at a few times,</li>
+<li>tlist2d: times at which Pmicro2d polarization saved</li>
+<li>Ax_list2d: values of A_x at times in tlist2d</li>
+<li>Ay_list2d: values of A_y at times in tlist2d</li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(dictionary)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="TF_SECOND.crystal.solver.variational_gs">
+<code class="descname">variational_gs</code><span class="sig-paren">(</span><em>save_meta=False</em>, <em>save_summary=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.crystal.solver.variational_gs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate 1s by energy minimization approx</p>
+<p>The 1s exciton state is the lowest energy eigenstate of the system
+Hamiltonian. This means one can use a gradient descent approach to
+find the state of lowest energy - and this state will be the 1s exciton
+state.
+The quantity to be minimized is E=&lt;phi|H|phi&gt;/&lt;phi|phi&gt;, where phi is
+the state to be varied, and E is the energy (binding relative to gap).
+The gradient descent is performed by defining a tensorflow graph, with
+an ADAM optimizer routine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li><strong>save_meta</strong> (<em>optional</em>) – save metadata of the tensorflow graph to file for
+use in tensoboard. Defaults to False.</li>
+<li><strong>save_summary</strong> – save a summary of the loss decay to tensorboard
+output. Defaults to False.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><dl class="docutils">
+<dt>dictoinary of:</dt>
+<dd><ul class="first last simple">
+<li>energy_1s_var: binding energy of 1s state</li>
+<li>steps_taken: how many variational steps were taken</li>
+</ul>
+</dd>
+</dl>
+</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">(dictionary)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="TF_SECOND.crystal.generate_params.html" class="btn btn-neutral float-right" title="TF_SECOND.crystal.generate_params" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../api.html" class="btn btn-neutral" title="TF-SeConD code documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

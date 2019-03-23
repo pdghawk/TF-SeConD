@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Background &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="User Guide" href="guide.html" />
+    <link rel="prev" title="Why Tensorflow?" href="why_tf.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-semiconductor">The Semiconductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-laser-fields">The Laser Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coupling-the-crystal-and-the-laser">Coupling The Crystal and The Laser</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">TF-SeConD code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Background</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Background.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<p>This python package is designed for the calculation of ultrafast dynamics in 2d
+semiconductor crystals.</p>
+<p>In order to understand how to use this package we first can go over the
+underlying physics behind the calculations. We want to solve the problem of what
+happens when we shine laser light through a 2d semiconductor. Let’s first mention
+a few important features of such materials and how those features are modelled.</p>
+<p>This package is intended for use primarily by those with a reasonable knowledge
+of semiconductor and laser physics.</p>
+<div class="section" id="the-semiconductor">
+<h2>The Semiconductor<a class="headerlink" href="#the-semiconductor" title="Permalink to this headline">¶</a></h2>
+<p>Semiconductors have valence and conduction bands separated by an energy of a few
+eV (any undergraduate solid state physics book should have a good description of
+semiconductors and band structures). Holes in the valence band can be, via the
+Coulomb interaction, form states with electrons in the conduction band -
+these states are known as excitons. This means that there is resonance in the
+absorption of such media around the bound, optically bright exciton states. The
+resonances will therefore be at energies less than the band gap (Eg) of the semiconductor,
+the amount lower than the band gap is the binding energy of that exciton state.</p>
+<p>The strength of the absorption is influenced by the dipole. The dipole is, in
+general a k-dependent quantity. The symmetry of the states along
+the band structure can change quite a lot (particularly around avoided crossings),
+which can lead to quite large variations in the dipole in k space. This k-variation
+of the dipole is often not too important when electron-hole polarization remains
+close the band gap position. But in ultrafast physics where one moves away from
+the band gap, it can become important.</p>
+<p>The code is currently set up to consider monolayers of black phosphorous. The band
+structure used is a fit to a tight binding model, which is itself a fit to a DFT
+calculated band structure.</p>
+</div>
+<div class="section" id="the-laser-fields">
+<h2>The Laser Fields<a class="headerlink" href="#the-laser-fields" title="Permalink to this headline">¶</a></h2>
+<p>We will specifically consider the case of two laser fields.</p>
+<p>One of these will be close to the exciton resonance of the semiconductor. This
+allows us to study the physics of what happens when we excite the excitonic state,
+and also we can apply the rotating wave approximation to the equations.</p>
+<p>There is the option to include a second laser field. Generally, one of a longer
+wavelength - typically wavelength&gt;3microns. The reason for this is that fields with
+a longer wavelength can drive the polarization generated by the optical laser field
+to move around in k space. longer wavelengths at the same laser field strength
+allows polarization to move further.</p>
+</div>
+<div class="section" id="coupling-the-crystal-and-the-laser">
+<h2>Coupling The Crystal and The Laser<a class="headerlink" href="#coupling-the-crystal-and-the-laser" title="Permalink to this headline">¶</a></h2>
+<p>In order to solve the time dynamical problem of the interaction, one has to solve a
+large set of coupled differential equations: in particular, the semiconductor optical
+Bloch equations [Lindberg, M., and Koch, S.W. “Effective Bloch equations for semiconductors.” Physical Review B 38 (1988)].</p>
+<p>When only an optical field is applied, one can measure the absorption of the crystal.
+There exist relationships for extracting this absorption fairly accurately in calculations,
+without having to propagate a field through the crystal, that method is employed here.</p>
+<p>When both laser pulses are present in the crystal, the optical pulse excites the
+exciton state, while the longer wavelength pulse drives polarization in the crystal.
+As a result, the light that is transmitted through the crystal contains a series of
+spectral components that are sidebands around the optical frequency. This effect
+has been measured in several recent experiments [
+Zaks,B et al “Experimental observation of electron–hole recollisions.” Nature (2012),
+Langer,F et al “Lightwave-driven quasiparticle collisions on a subcycle timescale.” Nature (2016),
+Langer,F et al. “Lightwave valleytronics in a monolayer of tungsten diselenide.” Nature (2018)]</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="guide.html" class="btn btn-neutral float-right" title="User Guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="why_tf.html" class="btn btn-neutral" title="Why Tensorflow?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

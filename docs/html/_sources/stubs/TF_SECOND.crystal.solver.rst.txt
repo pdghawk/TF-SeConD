@@ -1,0 +1,37 @@
+TF\_SECOND.crystal.solver
+=========================
+
+.. currentmodule:: TF_SECOND.crystal
+
+.. autoclass:: solver
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~solver.A_thz
+      ~solver.E_opt_RWA
+      ~solver.E_opt_exp
+      ~solver.E_opt_fun
+      ~solver.E_thz
+      ~solver.__init__
+      ~solver.calculate_absorption
+      ~solver.check_1s_performed
+      ~solver.check_vals
+      ~solver.eigen_solve
+      ~solver.get_1s_2d
+      ~solver.get_epsr
+      ~solver.get_one_s_states
+      ~solver.reset_LASER
+      ~solver.solve_SBE
+      ~solver.variational_gs
+   
+   
+
+   
+   
+   

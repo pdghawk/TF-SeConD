@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Guide &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TF-SeConD code documentation" href="api.html" />
+    <link rel="prev" title="Background" href="Background.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Background.html">Background</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-format-of-the-package">Basic format of the package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#define-the-problem-to-solve">Define the problem to solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculate-some-dynamics">calculate some dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-the-results">plot the results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-simple-example">A simple example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-made-simulation-runs">pre-made simulation runs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-tensorflow">Advanced/Tensorflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gpu-considerations">GPU considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tensorboard">Tensorboard</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">TF-SeConD code documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>User Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="basic-format-of-the-package">
+<h2>Basic format of the package<a class="headerlink" href="#basic-format-of-the-package" title="Permalink to this headline">¶</a></h2>
+<p>A calculation of dynamics using TF-SeConD follows the following methodology:</p>
+<blockquote>
+<div><ul class="simple">
+<li>set-up the parameters of the crystal, laser and numerical grids</li>
+<li>create a TF_SECOND object using those parameters.</li>
+<li>use methods of the TF_SECOND object to calculate exciton physics, absorption, dynamics etc.</li>
+<li>plot the results of those calculations.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="define-the-problem-to-solve">
+<h2>Define the problem to solve<a class="headerlink" href="#define-the-problem-to-solve" title="Permalink to this headline">¶</a></h2>
+<p>Before we can solve the problem, we have to decide what the problem will be: what
+crystal do we want to look at, what lasers will interact with it, what form should
+the Coulomb interaction take etc.</p>
+<p>The main part of TF-SeCond where the calculations of the dynamics take place, needs
+to receive these material and laser properties as well as the properties of the
+numerical grids on which the problems should be solved.</p>
+<p>A method is provided to easily create dictionaries of such parameters in the form
+TF_SECOND expects to receive them:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND</span> <span class="kn">as</span> <span class="nn">TFSCD</span>
+<span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">generate_params</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>which creates three parameter dictionaries:</p>
+<blockquote>
+<div><ul class="simple">
+<li>XTAL_PARAMS  : crystal parameters</li>
+<li>LASER_PARAMS : laser parameters</li>
+<li>GRID_PARAMS  : numerical grid parameters</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="calculate-some-dynamics">
+<h2>calculate some dynamics<a class="headerlink" href="#calculate-some-dynamics" title="Permalink to this headline">¶</a></h2>
+<p>Before we can solve dynamical problems, we need to initialise the TF_SECOND object
+that specifies the system we want to solve - this is where we use the parameters
+of the system we just defined.</p>
+<p>we can write:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND</span> <span class="kn">as</span> <span class="nn">TFSCD</span>
+
+<span class="n">XTAL_PARAMS</span><span class="p">,</span> <span class="n">LASER_PARAMS</span><span class="p">,</span> <span class="n">GRID_PARAMS</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">generate_params</span><span class="p">()</span>
+
+<span class="hll"><span class="n">SBE_obj</span>   <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">XTAL_PARAMS</span><span class="p">,</span><span class="n">LASER_PARAMS</span><span class="p">,</span><span class="n">GRID_PARAMS</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>Upon initialization of our SBE_obj (Semiconductor Bloch Equation OBJect) we calculate
+the Coulomb matrix elements in the form specified in the parameters passed to it.</p>
+<p>We are now ready to calculate further properties of our system - the nature of excitons
+of the crystal, and dynamics that occur when interacting with lasers.</p>
+<p>Knowing the form of the 1s exciton, i.e its wavefunction and energetic binding
+is essential to get the correct dynamics. One can either find this in advance of
+running the dynamics - via either a variational method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND</span> <span class="kn">as</span> <span class="nn">TFSCD</span>
+
+<span class="n">XTAL_PARAMS</span><span class="p">,</span> <span class="n">LASER_PARAMS</span><span class="p">,</span> <span class="n">GRID_PARAMS</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">generate_params</span><span class="p">()</span>
+
+<span class="n">SBE_obj</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">XTAL_PARAMS</span><span class="p">,</span><span class="n">LASER_PARAMS</span><span class="p">,</span><span class="n">GRID_PARAMS</span><span class="p">)</span>
+
+<span class="hll"><span class="c1"># find the variation groundstate - the 1s exciton</span>
+</span><span class="hll"><span class="n">exciton_dict</span>  <span class="o">=</span> <span class="n">SBE_obj</span><span class="o">.</span><span class="n">variational_gs</span><span class="p">()</span>
+</span></pre></div>
+</div>
+<p>Note that one can also calculate the 1s state via solving the eigenproblem, which
+is ‘exact’ (to level of approximation of numerics). A method for doing this is available
+in <a class="reference internal" href="stubs/TF_SECOND.crystal.solver.html#TF_SECOND.crystal.solver.eigen_solve" title="TF_SECOND.crystal.solver.eigen_solve"><code class="xref py py-func docutils literal notranslate"><span class="pre">TF_SECOND.crystal.solver.eigen_solve()</span></code></a>. But, it becomes computationally
+expensive for large grids. However it can be useful to check for smaller grids that
+there is a good match between the solutions of eigenvalue method and the variational
+approach.</p>
+<p>Following finding the 1s state, one can calculate the dynamics of the problem, If the variational
+ground state problem hasn’t yet been solved for the 1s state, the dynamical methods
+will auto-run the variational 1s solver</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND</span> <span class="kn">as</span> <span class="nn">TFSCD</span>
+
+<span class="n">XTAL_PARAMS</span><span class="p">,</span> <span class="n">LASER_PARAMS</span><span class="p">,</span> <span class="n">GRID_PARAMS</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">generate_params</span><span class="p">()</span>
+
+<span class="n">SBE_obj</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">XTAL_PARAMS</span><span class="p">,</span><span class="n">LASER_PARAMS</span><span class="p">,</span><span class="n">GRID_PARAMS</span><span class="p">)</span>
+
+<span class="c1"># find the variation groundstate - the 1s exciton</span>
+<span class="n">exciton_dict</span>  <span class="o">=</span> <span class="n">SBE_obj</span><span class="o">.</span><span class="n">variational_gs</span><span class="p">()</span>
+
+<span class="hll"><span class="c1"># calculate the dynamics - with optical and THz lasers on</span>
+</span><span class="hll"><span class="n">hsg_dict</span> <span class="o">=</span> <span class="n">SBE_obj</span><span class="o">.</span><span class="n">solve_SBE</span><span class="p">(</span><span class="n">include_coulomb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span><span class="hll">
+</span><span class="hll"><span class="c1"># calculate the absorption of the system</span>
+</span><span class="hll"><span class="n">absorption_dict</span> <span class="o">=</span> <span class="n">SBE_obj</span><span class="o">.</span><span class="n">calculate_absorption</span><span class="p">(</span><span class="n">include_coulomb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</span></pre></div>
+</div>
+<p>The data contained in the data dictionaries is organised as follows:</p>
+<p><a class="reference internal" href="stubs/TF_SECOND.crystal.solver.html#TF_SECOND.crystal.solver.solve_SBE" title="TF_SECOND.crystal.solver.solve_SBE"><code class="xref py py-func docutils literal notranslate"><span class="pre">TF_SECOND.crystal.solver.solve_SBE()</span></code></a> returns a dictionary containing:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">freq_dict: dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Pw</li>
+<li>Ew</li>
+<li>Iw</li>
+<li>w_eV</li>
+<li>w_sideband</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">time_dict: dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>opt_field</li>
+<li>opt_env</li>
+<li>polarization</li>
+<li>time_grid</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">kt_dict: dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>kx</li>
+<li>ky</li>
+<li>Ax</li>
+<li>Ay</li>
+<li>P_kt_XGX</li>
+<li>P_kt_YGY</li>
+<li>Pmicro2d</li>
+<li>tlist2d</li>
+<li>Ax_list2d</li>
+<li>Ay_list2d</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p><a class="reference internal" href="stubs/TF_SECOND.crystal.solver.html#TF_SECOND.crystal.solver.calculate_absorption" title="TF_SECOND.crystal.solver.calculate_absorption"><code class="xref py py-func docutils literal notranslate"><span class="pre">TF_SECOND.crystal.solver.calculate_absorption()</span></code></a> returns a dictionary containing:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">freq_dict: dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Pw</li>
+<li>Ew</li>
+<li>w_norm</li>
+<li>w_sideband</li>
+<li>absorption_bare</li>
+<li>absorption</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">time_dict: dictionary containing:</p>
+<blockquote>
+<div><ul class="simple">
+<li>opt_field</li>
+<li>opt_env</li>
+<li>polarization</li>
+<li>time_grid</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>If one wants to vary a property of the laser it makes sense to only solve the exciton
+wavefunction once, and re-running the dynamics for each case of the laser variation
+by re-setting the laser parameters of the TF_SECOND object. For this purpose one can
+use <a class="reference internal" href="stubs/TF_SECOND.crystal.solver.html#TF_SECOND.crystal.solver.reset_LASER" title="TF_SECOND.crystal.solver.reset_LASER"><code class="xref py py-func docutils literal notranslate"><span class="pre">TF_SECOND.crystal.solver.reset_LASER()</span></code></a>. An example of how one can do this
+can be found in a pre-made running routine: <a class="reference internal" href="stubs/TF_SECOND.runs.html#TF_SECOND.runs.thz_loop" title="TF_SECOND.runs.thz_loop"><code class="xref py py-func docutils literal notranslate"><span class="pre">TF_SECOND.runs.thz_loop()</span></code></a>.</p>
+</div>
+<div class="section" id="plot-the-results">
+<h2>plot the results<a class="headerlink" href="#plot-the-results" title="Permalink to this headline">¶</a></h2>
+<p>We have seen how we can create dictionaries of data for different dynamics simulations
+in 2d semiconductors. Let’s see how we can look at the data.</p>
+<p>Clearly we can simply extract the data from the dictionaries, and use matplotlib
+to plot the data.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-simple-example">
+<h3>A simple example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h3>
+<p>(This example also available as a jupyter notebook - example.ipynb)</p>
+<p>First, we will want to import the TF-SeConD package, matplotlib plotting, and numpy</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND</span> <span class="kn">as</span> <span class="nn">TFSCD</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>Next, let’s set up the parameters of the model in the most basic way:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Nx</span><span class="o">=</span><span class="n">Ny</span><span class="o">=</span><span class="mi">31</span>
+<span class="n">XTAL_PARAMS</span><span class="p">,</span> <span class="n">LASER_PARAMS</span><span class="p">,</span> <span class="n">GRID_PARAMS</span> <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">crystal</span><span class="o">.</span><span class="n">generate_params</span><span class="p">(</span><span class="n">Nx</span><span class="p">,</span><span class="n">Ny</span><span class="p">,</span><span class="n">do_absorption</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We have chosen quite a small numerical grid, for quick yet inaccurate calculation
+for example purposes here, of 31 by 31 cells in the crystals first Brillioun zone.
+We have also chosen that we are not going to look at absorption, selecting this
+flag as True would auto-set laser parameters to be optimal for studying absorption.</p>
+<p>Now that we have parameter dictionaries for our dynamics calculation, let us run
+a calculation of the dynamics:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the &#39;solver&#39; object</span>
+<span class="n">SBE_obj</span>   <span class="o">=</span> <span class="n">TFSCD</span><span class="o">.</span><span class="n">cystal</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">XTAL_PARAMS</span><span class="p">,</span><span class="n">LASER_PARAMS</span><span class="p">,</span><span class="n">GRID_PARAMS</span><span class="p">)</span>
+
+<span class="c1"># run the dynamics - output is a dictionary of results</span>
+<span class="n">result_dict</span> <span class="o">=</span> <span class="n">SBE_obj</span><span class="o">.</span><span class="n">solve_SBE</span><span class="p">(</span><span class="n">include_coulomb</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now let’s plot the harmonic sideband spectra created in this simulation</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># use the pre-made set-up of plotting parameters to make things look nice</span>
+<span class="n">TFSCD</span><span class="o">.</span><span class="n">set_rcparams</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+
+<span class="c1"># optionally plot in notebook if using jupyter</span>
+<span class="c1"># %matplotlib inline</span>
+
+<span class="c1"># create a simple plot of the sideband spectra (on log10 scale)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;freq_data&#39;</span><span class="p">][</span><span class="s1">&#39;w_sideband&#39;</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;freq_data&#39;</span><span class="p">][</span><span class="s1">&#39;Iw&#39;</span><span class="p">]),</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;sideband order&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;spectral intensity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># could use plt.semilogy to make y logarithmic scale</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">semilogy</span><span class="p">(</span><span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;freq_data&#39;</span><span class="p">][</span><span class="s1">&#39;w_sideband&#39;</span><span class="p">],</span><span class="n">result_dict</span><span class="p">[</span><span class="s1">&#39;freq_data&#39;</span><span class="p">][</span><span class="s1">&#39;Iw&#39;</span><span class="p">],</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;sideband order&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;spectral intensity&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>the plt.semilogy version of the plot should look like:</p>
+<img alt="_images/spectra_figure.png" src="_images/spectra_figure.png" />
+</div>
+<div class="section" id="pre-made-simulation-runs">
+<h3>pre-made simulation runs<a class="headerlink" href="#pre-made-simulation-runs" title="Permalink to this headline">¶</a></h3>
+<p>We can also use premade plotting routines available within the TF-SeConD package
+to plot the result:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">TF_SECOND.runs</span> <span class="kn">as</span> <span class="nn">runs</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+
+<span class="n">Nx</span><span class="o">=</span><span class="n">Ny</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">17</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">31</span><span class="p">])</span>
+<span class="n">runs</span><span class="o">.</span><span class="n">k_loop</span><span class="p">(</span><span class="n">Nx</span><span class="p">,</span><span class="n">Ny</span><span class="p">,</span><span class="s1">&#39;premade_loop_example&#39;</span><span class="p">,</span><span class="n">plot_figs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">save_figs</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will produce a series of figures of how the simulation results vary as we change
+the density of points in the numerical grid if the crystals Brillioun zone (i,e change
+the number of k-points). Notably, how the sideband spectra. Also plotted is, for the
+the largest Nx and Ny: P_k(t) false colour plots - this allows us to see if there
+are fast varying regions of the microscopic polarization that may cause problems
+for smaller numerical grids.</p>
+</div>
+</div>
+<div class="section" id="advanced-tensorflow">
+<h2>Advanced/Tensorflow<a class="headerlink" href="#advanced-tensorflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gpu-considerations">
+<h3>GPU considerations<a class="headerlink" href="#gpu-considerations" title="Permalink to this headline">¶</a></h3>
+<p>For the advanced user running on GPU, there may be several further tests you
+will wish to make to ensure that TF-SeConD is running smoothly on your system
+and making the most if your GPU capability.</p>
+<p>Firstly, you should check that during dynamical calculation the GPU is being used,
+for Nvidia GPU you can use the command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nividia-smi --loop=3</span>
+</pre></div>
+</div>
+<p>to check that the utilization of the GPU is in the high 10’s of %. Larger numerical
+grids (in k space) will show higher usage than smaller grids. loop=3, will update
+the nvidia output every 3 seconds.</p>
+</div>
+<div class="section" id="tensorboard">
+<h3>Tensorboard<a class="headerlink" href="#tensorboard" title="Permalink to this headline">¶</a></h3>
+<p>Various methods within TF_SECOND contain the ability to create tensorboards of their
+computational graphs, including meta information - and also some summary data
+produced during calculation, which can be turned on by keyword arguments of the
+method calls.</p>
+<p>Specific methods are:</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api.html" class="btn btn-neutral float-right" title="TF-SeConD code documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Background.html" class="btn btn-neutral" title="Background" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

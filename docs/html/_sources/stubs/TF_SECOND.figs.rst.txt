@@ -1,0 +1,27 @@
+TF\_SECOND.figs
+===============
+
+.. automodule:: TF_SECOND.figs
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      plot_P_2d_snapshots
+      plot_Pkt
+      plot_absorption
+      plot_spectra
+      plot_spectra_twoaxis
+      plot_thz_polar_spectra
+   
+   
+
+   
+   
+   
+
+   
+   
+   

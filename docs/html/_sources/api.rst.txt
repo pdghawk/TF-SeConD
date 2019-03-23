@@ -1,0 +1,14 @@
+TF-SeConD code documentation
+=============================
+
+TF_SECOND
+----------------------------
+
+.. currentmodule:: TF_SECOND
+.. autosummary::
+     :toctree: stubs
+
+     TF_SECOND.crystal.solver
+     TF_SECOND.crystal.generate_params
+     TF_SECOND.runs
+     TF_SECOND.figs

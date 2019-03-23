@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>TF_SECOND.figs &mdash; TF-SeConD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="../license.html" />
+    <link rel="prev" title="TF_SECOND.runs" href="TF_SECOND.runs.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> TF-SeConD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../why_tf.html">Why Tensorflow?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Background.html">Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">User Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">TF-SeConD code documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#tf-second">TF_SECOND</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.solver.html">TF_SECOND.crystal.solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.crystal.generate_params.html">TF_SECOND.crystal.generate_params</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TF_SECOND.runs.html">TF_SECOND.runs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">TF_SECOND.figs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">TF-SeConD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">TF-SeConD code documentation</a> &raquo;</li>
+        
+      <li>TF_SECOND.figs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/stubs/TF_SECOND.figs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-TF_SECOND.figs">
+<span id="tf-second-figs"></span><h1>TF_SECOND.figs<a class="headerlink" href="#module-TF_SECOND.figs" title="Permalink to this headline">¶</a></h1>
+<p>Module containing pre-made plotting routines for TF-SeConD</p>
+<p class="rubric">Functions</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.figs.plot_P_2d_snapshots" title="TF_SECOND.figs.plot_P_2d_snapshots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_P_2d_snapshots</span></code></a>(data_dict,&nbsp;file_path[,&nbsp;…])</td>
+<td>set of false color images of P_{k} (in 2d) at a few moments in time</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.figs.plot_Pkt" title="TF_SECOND.figs.plot_Pkt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_Pkt</span></code></a>(data_dict,&nbsp;file_path,&nbsp;direction[,&nbsp;…])</td>
+<td>Color plot of P_k(t) along either x or y axis in k, over time</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.figs.plot_absorption" title="TF_SECOND.figs.plot_absorption"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_absorption</span></code></a>(data_dict_list,&nbsp;file_path[,&nbsp;…])</td>
+<td>plot a scan of absorption data for different experiments</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.figs.plot_spectra" title="TF_SECOND.figs.plot_spectra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_spectra</span></code></a>(data_dict_list,&nbsp;file_path[,&nbsp;…])</td>
+<td>plot a series of spectra, given a list of data dictionaries from solve_SBE</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#TF_SECOND.figs.plot_spectra_twoaxis" title="TF_SECOND.figs.plot_spectra_twoaxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_spectra_twoaxis</span></code></a>(data_dict_list,&nbsp;file_path)</td>
+<td>plot spectra scan, with sideband and eV axes (x, top and bottom) on same plot</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#TF_SECOND.figs.plot_thz_polar_spectra" title="TF_SECOND.figs.plot_thz_polar_spectra"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_thz_polar_spectra</span></code></a>(data_dict_list,&nbsp;…)</td>
+<td>polar plot of spectra as THz laser polarization rotated</td>
+</tr>
+</tbody>
+</table>
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_P_2d_snapshots">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_P_2d_snapshots</code><span class="sig-paren">(</span><em>data_dict</em>, <em>file_path</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_P_2d_snapshots" title="Permalink to this definition">¶</a></dt>
+<dd><p>set of false color images of P_{k} (in 2d) at a few moments in time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict</strong> – a data dictionary produced by TF_SECOND.solve_SBE</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/Pk2d_snaps.pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_Pkt">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_Pkt</code><span class="sig-paren">(</span><em>data_dict</em>, <em>file_path</em>, <em>direction</em>, <em>logscale=False</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_Pkt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color plot of P_k(t) along either x or y axis in k, over time</p>
+<p>A 2d false color plot of P_{k_x}(t) (or P_{k_y{(t)}), with the resultant axes
+being k_{x}(or k_{y}) and t, and the color representing microscopic polarization
+at that point. P can be plotted on linear or log scale.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict</strong> – a data dictionary produced by TF_SECOND.solve_SBE</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/Pkt…..pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>logscale</strong> – (bool) if True P will be plotted on log10(P) scale</li>
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_absorption">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_absorption</code><span class="sig-paren">(</span><em>data_dict_list</em>, <em>file_path</em>, <em>labels=[]</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_absorption" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot a scan of absorption data for different experiments</p>
+<p>An simulation/experiment for absorption can be run with TF_SECOND.calculate_absorption
+with outputs a data dictionary. One can run a series of simulations for different
+conditions, (e.g. grid, laser parameter etc), and save the dictionaries into a
+python list. This funtion will plot the absorption from each experiment, with
+color coded lines and legend.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict</strong> – a python list of dictionaries output by TF_SECOND.solve_SBE</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/absorption.pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>labels</strong> – python list of strings, labels for legend corresponding to
+each dictionary in the data_dict_list list</li>
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_spectra">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_spectra</code><span class="sig-paren">(</span><em>data_dict_list</em>, <em>file_path</em>, <em>labels=[]</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot a series of spectra, given a list of data dictionaries from solve_SBE</p>
+<p>Harmonic sideband spectra can be calculated using TF_SECOND.solve_SBE, which
+outputs a dictionary of useful quantiites. Saving a series of such
+dictionaries to a python list, can then be passed to plot_spectra, which will
+plot the spectra for all cases in the list, with lines colored according the
+position of the data in the python list. This is particularly useful for
+scanning a single parameter of an experiment, and seeing how the results vary.</p>
+<p>If a single data dictionary is passed, the spectra for that single experiment
+will be plotted in black.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict</strong> – a python list of dictionaries output by TF_SECOND.solve_SBE</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/spectra.pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>labels</strong> – python list of strings, labels for legend corresponding to
+each dictionary in the data_dict_list list</li>
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_spectra_twoaxis">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_spectra_twoaxis</code><span class="sig-paren">(</span><em>data_dict_list</em>, <em>file_path</em>, <em>labels=[]</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_spectra_twoaxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>plot spectra scan, with sideband and eV axes (x, top and bottom) on same plot</p>
+<p>Harmonic sideband spectra can be calculated using TF_SECOND.solve_SBE, which
+outputs a dictionary of useful quantiites. Saving a series of such
+dictionaries to a python list, can then be passed to plot_spectra, which will
+plot the spectra for all cases in the list, with lines colored according the
+position of the data in the python list. This is particularly useful for
+scanning a single parameter of an experiment, and seeing how the results vary.</p>
+<p>If a single data dictionary is passed, the spectra for that single experiment
+will be plotted in black.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict</strong> – a python list of dictionaries output by TF_SECOND.solve_SBE</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/spectra_twoaxis.pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>labels</strong> – python list of strings, labels for legend corresponding to
+each dictionary in the data_dict_list list</li>
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="TF_SECOND.figs.plot_thz_polar_spectra">
+<code class="descclassname">TF_SECOND.figs.</code><code class="descname">plot_thz_polar_spectra</code><span class="sig-paren">(</span><em>data_dict_list</em>, <em>thz_pols</em>, <em>file_path</em>, <em>save_figs=True</em>, <em>plot_figs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#TF_SECOND.figs.plot_thz_polar_spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>polar plot of spectra as THz laser polarization rotated</p>
+<p>Produces a false colour image of how the harmonic sideband spectra varies
+as THz laser polarization is roatated. Plot has axes:
+r:     sideband order
+theta: THz polarization angle w.r.t to crystal ( 0rad: X-Gamma-X)
+color represents log10(I(w)) normalised to second order sideband.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data_dict_list</strong> – a data dictionary produced by TF_SECOND.solve_SBE</li>
+<li><strong>thz_pols</strong> – numpy array of the polarization angle of THz laser,
+data_dict_list[i] should have data corresponding to
+polarization in thz_pols[i]</li>
+<li><strong>file_path</strong> – directory to save to -  figure will be saved to file_path/THz_polar_spectra.pdf</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Keyword Arguments:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first last simple">
+<li><strong>save_figs</strong> – (bool) save figures to file if True</li>
+<li><strong>plot_figs</strong> – (bool) plot figures to screen if True</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="TF_SECOND.runs.html" class="btn btn-neutral" title="TF_SECOND.runs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Peter Hawkins.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

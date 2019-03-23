@@ -1,0 +1,15 @@
+Introduction
+==============
+
+TF-SeConD (TensorFlow-SEmiCONductor Dynamics) is a python/tensorflow package
+for the calculation of the interaction of ultrafast lasers with two-dimensional
+crystals.
+
+Calculating ultrafast dynamics, with the inclusion of the Coulomb interaction for
+generic crystals, without making assumptions about their symmetry to reduce the
+size of the problem is an expensive computational task. TF-SeConD is designed to
+be able to handle generic band structures and dipole in a square lattice (could be
+imported from DFT results from other software), without making such assumptions
+so that it can be used for many crystal types easily. In order to handle the complexity
+of the task, Tensorflow, which contains many functions useful for performing linear
+algebra tasks on GPUs which are ideally suited to such tasks, is used.    
